@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "devices": [
+    { "type": "wokwi-esp8266", "id": "esp", "top": 0, "left": 0 },
+    { "type": "wokwi-dht11", "id": "dht", "top": 200, "left": 100 },
+    { "type": "wokwi-soil-moisture", "id": "soil", "top": 200, "left": 300 },
+    { "type": "wokwi-relay", "id": "relay", "top": 200, "left": 500 }
+  ],
+  "connections": [
+    ["esp:D4", "dht:SIG"],
+    ["esp:A0", "soil:SIG"],
+    ["esp:D1", "relay:IN"]
+  ]
+}
